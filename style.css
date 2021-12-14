@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem; 
+}
+
+.btn {
+    position: relative;
+    border: none;
+    outline: none;
+    height: 1.5rem;
+    width: 4rem;
+    margin-top: 1rem;
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+
+.btn::after {
+    content: '';
+    height: .15rem;
+    width: 100%;
+    background: blueviolet;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .3s;
+}
+
+
+/* left button */
+.left-btn::after {
+    width: 0;
+}
+
+.left-btn:hover::after{
+    width: 100%;
+}
+
+
+/* center button */
+.center-btn::after {
+    transform: scale(0, 1);
+}
+.center-btn:hover::after {
+    transform: scale(1, 1);
+}
+
+
+/* bottom buttom */
+.bottom-btn::after {
+    bottom: -.15rem;
+}
+
+.bottom-btn:hover::after {
+    bottom: 0;
+}
